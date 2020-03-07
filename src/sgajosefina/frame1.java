@@ -29,7 +29,7 @@ public class frame1 extends javax.swing.JFrame {
        
         initComponents();
          setTitle("SGA Josefina");
-        jPanel1.add(new fondo(this.getWidth(),this.getHeight()));
+        jPanel1.add(new uiclasses.BackgroundSimple(this.getWidth(), this.getHeight(), new File("datos/login4.png")));
         setResizable(false);
 
         
@@ -322,32 +322,4 @@ public class frame1 extends javax.swing.JFrame {
     private javax.swing.JPasswordField txtpassword;
     private javax.swing.JTextField txtusuario;
     // End of variables declaration//GEN-END:variables
-}
-
-class fondo extends JPanel{
-
-public fondo(int widht, int height){
-
-setSize(widht,height);
-
-
-
-}
-
-
-public void paintComponent(Graphics g){
-
-try{
-File imagen=new File("datos/login4.png");
-Image i=ImageIO.read(imagen);
-
- g.drawImage(i, 0, 0, this.getWidth(),this.getHeight(), null);
-}catch(Exception e){
-
-
-
-}
-}
-
-
 }
